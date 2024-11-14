@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // Define routes after setting up middleware
 app.use("/api", todoRoutes);
 
-const mongooseURL = 'mongodb://127.0.0.1:27017/todoApp'
+const mongooseURL = 'mongodb+srv://Pritam:7061771656@cluster0.n6dxk.mongodb.net/'
 mongoose.connect(mongooseURL);
 
 const db = mongoose.connection;
