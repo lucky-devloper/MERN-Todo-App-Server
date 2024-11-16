@@ -9,7 +9,7 @@ const todoRoutes = require('./todoRoutes');
 // Set up CORS middleware first
 app.use(cors({
   origin: 'https://mern-todo-client-side.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true,
 }));
 
