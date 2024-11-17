@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const todoRoutes = require('./todoRoutes');
+require('dotenv').config()
 
 // Set up CORS middleware first
 app.use(cors({
@@ -19,7 +20,7 @@ app.use(bodyParser.json());
 // Define routes after setting up middleware
 app.use("/api", todoRoutes);
 
-const mongooseURL = 'mongodb+srv://Pritam:8059224718@cluster0.ge549.mongodb.net/'
+const mongooseURL = process.env.DB_URL
 mongoose.connect(mongooseURL);
 
 const db = mongoose.connection;
