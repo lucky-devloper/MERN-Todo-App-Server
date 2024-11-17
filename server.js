@@ -8,7 +8,7 @@ const todoRoutes = require('./todoRoutes');
 
 // Set up CORS middleware first
 app.use(cors({
-  origin: 'https://mern-todo-client-side.vercel.app',
+  origin: 'http://localhost:5173',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true,
 }));
@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // Define routes after setting up middleware
 app.use("/api", todoRoutes);
 
-const mongooseURL = 'mongodb+srv://Pritam:7061771656@cluster0.3ux1j.mongodb.net/'
+const mongooseURL = 'mongodb+srv://Pritam:8059224718@cluster0.ge549.mongodb.net/'
 mongoose.connect(mongooseURL);
 
 const db = mongoose.connection;
